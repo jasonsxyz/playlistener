@@ -1,5 +1,9 @@
 # Playlistener
 
+`play • listener`
+
+- play, playlist, listen, listener. (what a revolutionary name!)
+
 A local music player built with Svelte and Tauri.
 
 ## Features
