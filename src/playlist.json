@@ -1,0 +1,51 @@
+[   
+    {
+        "id": "0",
+        "trackName": "The Mountains are Tall",
+        "trackArtist": "Yun Head",
+        "songUrl": "src/assets/tmat.mp3",
+        "cover": "src/assets/oat.png"
+    },
+    {
+        "id": "1",
+        "trackName": "Gardemn",
+        "trackArtist": "Yun Head",
+        "songUrl": "src/assets/gardemn.mp3",
+        "cover": "src/assets/oat.png"
+    },
+    {
+        "id": "2",
+        "trackName": "So much time in this world",
+        "trackArtist": "Yun Head",
+        "songUrl": "src/assets/somuch.mp3",
+        "cover": "src/assets/oat.png"
+    },
+    {
+        "id": "3",
+        "trackName": "Animosity",
+        "trackArtist": "Steven Kou",
+        "songUrl": "src/assets/animosity.mp3",
+        "cover": "src/assets/animosity.jpg"
+    },
+    {
+        "id": "4",
+        "trackName": "Assumptions",
+        "trackArtist": "Sam Gellaitry",
+        "songUrl": "C:\\Users\\Jason\\Documents\\_playlistener\\1\\assumptions.mp3",
+        "cover": "src/assets/assumptions.jpg"
+    },
+    {
+        "id": "5",
+        "trackName": "No Problems",
+        "trackArtist": "Ginger Root",
+        "songUrl": "src/assets/noproblems.mp3",
+        "cover": "src/assets/shinbangumi.jpg"
+    },
+    {
+        "id": "6",
+        "trackName": "movies for guys",
+        "trackArtist": "Jane Remover",
+        "songUrl": "src/assets/moviesforguys.mp3",
+        "cover": "src/assets/frailty.jpg"
+    }
+]

@@ -1,0 +1,98 @@
+{
+  "$schema": "../node_modules/@tauri-apps/cli/schema.json",
+  "build": {
+    "beforeBuildCommand": "npm run build",
+    "beforeDevCommand": "npm run dev",
+    "devPath": "http://localhost:5173",
+    "distDir": "../dist",
+    "withGlobalTauri": true
+  },
+  "package": {
+    "productName": "Playlistener",
+    "version": "0.1.0"
+  },
+  "tauri": {
+    "allowlist": {
+      "http": {
+        "all": true,
+        "request": true,
+        "scope": ["http://127.0.0.1:62024/*", "https://127.0.0.1/62024/*"]
+      },
+      "path": {
+        "all": true
+      },
+      "fs": {
+        "all": true,
+        "scope": ["**", "**/", "*", "$DOCUMENT"]
+      },
+      "dialog": {
+        "all": true
+      },
+      "protocol": {
+        "asset": true,
+        "assetScope": ["**", "**/", "*"]
+      },
+      "shell": {
+        "sidecar": true,
+        "scope": [
+          {
+            "name": "binaries/import-export-handler",
+            "sidecar": true
+          }
+        ]
+      }
+    },
+    "bundle": {
+      "active": true,
+      "category": "DeveloperTool",
+      "copyright": "",
+      "deb": {
+        "depends": []
+      },
+      "externalBin": ["binaries/import-export-handler"],
+      "icon": [
+        "icons/32x32.png",
+        "icons/128x128.png",
+        "icons/128x128@2x.png",
+        "icons/icon.icns",
+        "icons/icon.ico"
+      ],
+      "identifier": "com.playlistener.jason",
+      "longDescription": "",
+      "macOS": {
+        "entitlements": null,
+        "exceptionDomain": "",
+        "frameworks": [],
+        "providerShortName": null,
+        "signingIdentity": null
+      },
+      "resources": [],
+      "shortDescription": "",
+      "targets": "all",
+      "windows": {
+        "certificateThumbprint": null,
+        "digestAlgorithm": "sha256",
+        "timestampUrl": "",
+        "webviewInstallMode": {
+          "type": "offlineInstaller"
+        }
+      }
+    },
+    "security": {
+      "csp": "default-src 'self'; media-src 'self' asset: https://asset.localhost; img-src 'self' asset: https://asset.localhost; connect-src 'self' http://127.0.0.1:62024; style-src 'self' 'unsafe-inline';"
+    },
+    "updater": {
+      "active": false
+    },
+    "windows": [
+      {
+        "fullscreen": false,
+        "height": 680,
+        "resizable": false,
+        "title": "Playlistener",
+        "width": 960,
+        "additionalBrowserArgs": "--enable-features=OverlayScrollbar"
+      }
+    ]
+  }
+}

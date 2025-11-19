@@ -1,0 +1,440 @@
+* { -webkit-font-smoothing: antialiased; user-select: none;}
+
+@font-face {
+  font-family: 'Satoshi-Variable';
+  src: url('../fonts/Satoshi-Variable.woff2') format('woff2'),
+       url('../fonts/Satoshi-Variable.woff') format('woff'),
+       url('../fonts/Satoshi-Variable.ttf') format('truetype');
+  font-weight: 600;
+  font-display: swap;
+  font-style: normal;
+}
+
+body {
+  padding: 0;
+  margin: auto;
+  font-family: Satoshi-Variable;
+  background-color: #0D0D0D;
+}
+
+.player {
+  position: fixed;
+  display: inline-block;
+  width: 95%;
+  transform: translate(-50%, -50%);
+  bottom: -4%;
+  left: 50%;
+  padding: 12px;
+  border-radius: 10px;
+  background-color: #0f0f0f;
+}
+
+
+.track {
+  display: flex;
+  float: left;
+  width: 31%;
+}
+
+.mediaControls {
+  display: inline-block;
+  width: 35%;
+  height: 100%;
+  transform: translateX(1.5%);
+}
+.mediaControlsVolume {
+  float:right;
+  transform: translateY(20%);
+}
+
+.mediaSeekVol[type='range'] {
+  overflow: hidden;
+  width: 100%;
+  appearance: none;
+  background-color: #242424;
+  border-radius: 25px;
+  cursor: pointer;
+  float: right;
+}
+
+.mediaSeekVol[type='range']::-webkit-slider-runnable-track {
+  height: 5px;
+  appearance: none;
+  color: #ffffff;
+  margin-top: -1px;
+}
+
+.mediaSeekVol[type='range']::-webkit-slider-thumb {
+  width: 5px;
+  transform: translateY(10%);
+  -webkit-appearance: none;
+  height: 5px;
+  cursor: pointer;
+  background: #ffffff;
+  border-radius: 25px;
+  box-shadow: -154px 0 0 150px #ffffff;
+  transition: 150ms linear;
+}
+
+.mediaSeekVol[type='range']::-webkit-slider-thumb:hover{
+  transition: 150ms linear;
+  background: #0072fd;
+  box-shadow: -154px 0 0 150px #0072fd;
+}
+
+.mediaSeekVol[type='range']::-webkit-slider-thumb:active{
+  transition: 150ms linear;
+  background: #2e8cff;
+  box-shadow: -154px 0 0 150px #2e8cff;
+}
+
+
+/* https://stackoverflow.com/questions/18389224/how-to-style-html5-range-input-to-have-different-color-before-and-after-slider */
+
+.mediaSeek[type='range'] {
+  overflow: hidden;
+  width: 100%;
+  appearance: none;
+  background-color: #242424;
+  border-radius: 25px;
+  cursor: pointer;
+}
+
+.mediaSeek[type='range']::-webkit-slider-runnable-track {
+  height: 5px;
+  appearance: none;
+  color: #ffffff;
+  margin-top: -1px;
+}
+
+.mediaSeek[type='range']::-webkit-slider-thumb {
+  width: 5px;
+  transform: translateY(10%);
+  -webkit-appearance: none;
+  height: 5px;
+  cursor: pointer;
+  background: #ffffff;
+  border-radius: 25px;
+  box-shadow: -154px 0 0 150px #ffffff;
+  transition: 150ms linear;
+}
+
+.mediaSeek[type='range']::-webkit-slider-thumb:hover{
+  transition: 150ms linear;
+  background: #0072fd;
+  box-shadow: -154px 0 0 150px #0072fd;
+}
+
+.mediaSeek[type='range']::-webkit-slider-thumb:active{
+  transition: 150ms linear;
+  background: #2e8cff;
+  box-shadow: -154px 0 0 150px #2e8cff;
+}
+
+.mediaButton {
+  font-size: 1em;
+  appearance: none;
+  color: white;
+  cursor: pointer;
+  user-select: none;
+}
+
+.mediaButton:active {
+  color: gray;
+}
+
+.trackCover {
+  background-image: url("placeholder.png");
+  background-size: cover;
+  width: 48px;
+  height: 48px;
+  border-radius: 10px;
+}
+
+.coverChange-a {
+  animation: coverChange-a 0.25s ease-in; 
+}
+
+.coverChange-b {
+  animation: coverChange-b 0.25s ease-out; 
+}
+
+@keyframes coverChange-a {
+  0% {transform: rotate3d(0, 1, 0, 0deg);}
+  100% {transform: rotate3d(0, 1, 0, 90deg);}
+}
+
+@keyframes coverChange-b {
+  0% {transform: rotate3d(0, 1, 0, -90deg);}
+  100% {transform: rotate3d(0, 1, 0, 0deg);}
+}
+
+.trackInfo {
+
+}
+
+.trackSpacer {
+  width: 10px;
+}
+
+.trackChange-a {
+  animation: trackChange-a 0.25s;
+}
+
+.trackChange-b {
+  animation: trackChange-b 0.25s;
+}
+
+@keyframes trackChange-a {
+  0% {opacity: 1; transform: translateY(0%);}
+  100% {opacity: 0; transform: translateY(-10%);}
+}
+
+@keyframes trackChange-b {
+  0% {opacity: 0; transform: translateY(10%);}
+  100% {opacity: 1; transform: translateY(0%);}
+}
+
+.trackInfoName{
+  color: white;
+  font-size: 1em;
+  transform: translateY(25%);
+  font-weight: bold;
+  width: 200px;
+  white-space: nowrap;
+}
+
+.trackInfoArtist {
+  color: #828282;
+  font-size: 0.8em;
+  transform: translateY(20%);
+  width: 200px;
+  white-space: nowrap;
+  overflow:hidden;
+}
+
+.playlists {
+  position: fixed;
+  width: 72.5%;
+  height: 85.5%;
+  transform: translate(-50%, -50%);
+  top: 44%;
+  left: 62.5%;
+  border-radius: 10px;
+  background-color: #0f0f0f;
+  overflow-x: hidden;
+}
+
+.playlistInfo-bg{
+  background-color: #0072fd;
+  background-position: 0% 80%;
+  background-size: cover;
+  color: white;
+  width: 100%;
+  height: 25%;
+  padding: 20px;
+  z-index: -5;
+  opacity: 0.3;
+  filter: blur(20px);
+}
+
+
+.playlistInfo-contents{
+  position: absolute;
+  top:-0.5%;
+  color: white;
+  width: 100%;
+  height: 25%;
+  padding: 20px;
+  cursor: pointer;
+}
+
+.songlist {
+  position: absolute;
+  z-index: 5;
+  padding: 12px;
+  width: 96.5%;
+  background-color: #0f0f0f;
+}
+
+/* { border: 1px solid white;} */
+
+.navbar {
+  position: fixed;
+  width: 21.25%;
+  height: 81.5%;
+  transform: translate(-50%, -50%);
+  top: 44%;
+  left: 13.2%;
+  padding: 12px;
+  border-radius: 10px;
+  background-color: #0f0f0f;
+}
+
+.song-btn {
+  background-color: #121212;
+  color: white;
+  padding: 10px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 50ms linear;
+  user-select: none;
+}
+
+.song-btn:hover {
+  background-color: #151515;
+}
+
+.song-btn:active {
+  background-color: #202020;
+}
+
+.song-btn td {
+  vertical-align: middle;
+}
+
+.editSong-btn {
+  background-color: #121212;
+  color: white;
+  padding: 10px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.editSong-btn td {
+  vertical-align: middle;
+}
+
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+.material-symbols-rounded {
+  font-variation-settings:
+  'FILL' 1,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 48
+  ;
+}
+
+.minidialog {
+  padding: 10px;
+  border-radius: 10px;
+  color:white;
+  font-size: 1em;
+  position: absolute;
+  top: 83%;
+  left: 50%;
+  transform: translate(-50%, -60%);
+  z-index: 999999999;
+  user-select: none;
+  opacity: 0;
+  text-align: center;
+}
+
+.minidialog-anim {
+  animation: minidialog-anim 2s ease;
+}
+
+.positive {
+  background-color:#00b82b;
+}
+
+.negative {
+  background-color:#ff2b2b;
+}
+
+@keyframes minidialog-anim {
+  0% { opacity: 0; transform: translate(-50%, -25%);}
+  20% { opacity: 1; transform: translate(-50%, -60%);}
+  90% {opacity: 1;}
+  100% {opacity: 0;}
+}
+
+.dialog-bg {
+  background-color: #000000;
+  opacity: 0.7;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 999999;
+}
+
+.dialog-box {
+  position: absolute;
+  z-index: 999999;
+  background-color: #0F0F0F;
+  color: white;
+  border-radius: 15px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 25px;
+  animation: dialog 0.25s ease;
+}
+
+@keyframes dialog {
+  0% { transform: translate(-50%, -40%); opacity: 0; }
+  100% {opacity: 1;}
+}
+
+.playing {
+  color: #0072fd; 
+  animation: playing 0.25s ease;
+}
+
+.blue {
+  background-color: #0072fd;
+}
+
+.blue:hover {
+  background-color: #2085ff;
+}
+
+.blue:active {
+  background-color: #0061d8;
+}
+
+@keyframes playing {
+  0% { transform: translate(-50%, 10%); opacity: 0; }
+  100% {opacity: 1;}
+}
+
+input[type='text'] {
+  background-color: #181818;
+  color: white;
+  padding: 10px;
+  border-radius: 10px;
+  outline: none;
+  border:none;
+  width: 93%;
+  font-family: Satoshi-Variable;
+}
+
+.active {
+  background-color:#0072fd;
+}
+
+.active:hover {
+  background-color:#1d83ff;
+}
+
+.active:active{
+  background-color:#0056be;
+}
+
+.danger {
+
+}
+  
+.danger:hover {
+  background-color:#ff1818;
+}
+
+.danger:active{
+  background-color:#870000;
+}
+
+/* { border: 1px solid white;} */
