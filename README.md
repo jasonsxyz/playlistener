@@ -6,6 +6,10 @@
 
 A local music player built with Svelte and Tauri.
 
+### Preview
+
+![Image Preview](https://github.com/jasonsxyz/playlistener/blob/main/preview.png?raw=true)
+
 ## Features
 
 - Play Songs (duh)
