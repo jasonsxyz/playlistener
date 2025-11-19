@@ -1,6 +1,6 @@
-# Playlistener
+# ![Playlistener](https://github.com/jasonsxyz/playlistener/blob/main/playlistener.png?raw=true)
 
-`play • listener`
+`play • lis • ten • er`
 
 - play, playlist, listen, listener. (what a revolutionary name!)
 
